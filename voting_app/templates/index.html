@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Eligibility Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🗳 Voting Eligibility Checker</h1>
+
+    <form method="POST">
+        <input type="number" name="age" placeholder="Enter your age" required>
+        <button type="submit">Check Eligibility</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <h2>{{ result }}</h2>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>  
